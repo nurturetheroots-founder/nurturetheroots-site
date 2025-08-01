@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurture The Roots - Compassionate Postpartum Doula Services</title>
+    <meta name="description" content="Certified postpartum doula and newborn care specialist supporting Bay Area families through their fourth trimester journey with gentle guidance and overnight support.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e2d;
+            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f7f5f1;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4a5a5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e2d;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: #7a8471;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #2c3e2d;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4a5a5 0%, #c9a9a9 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e2d;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #2c3e2d;
+        }
+
+        .credentials {
+            background: #f7f5f1;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #7a8471;
+        }
+
+        .credentials h3 {
+            color: #2c3e2d;
+            margin-bottom: 1rem;
+        }
+
+        .credentials ul {
+            list-style: none;
+        }
+
+        .credentials li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .credentials li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7a8471;
+            font-weight: bold;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: #f7f5f1;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e2d;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #d4a5a5;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #2c3e2d;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #7a8471;
+        }
+
+        /* Journey Section */
+        .journey {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .journey h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e2d;
+        }
+
+        .journey-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .journey-content h3 {
+            color: #d4a5a5;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .journey-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e2d;
+        }
+
+        /* Core Beliefs */
+        .beliefs {
+            background: #f7f5f1;
+            padding: 3rem 0;
+        }
+
+        .beliefs h3 {
+            color: #2c3e2d;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .beliefs-list {
+            max-width: 700px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .belief-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #d4a5a5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Promise Section */
+        .promise {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .promise h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .promise p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+
+        .promise .signature {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: #f7f5f1;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e2d;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            color: #d4a5a5;
+        }
+
+        .contact-item p {
+            color: #2c3e2d;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e2d;
+            color: #f7f5f1;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content, .service-card, .belief-item {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Nurture The Roots</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#journey">My Journey</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>When Parents Are Nurtured, Families Flourish</h1>
+                <p class="hero-tagline">"Holding space for new beginnings"</p>
+                <p class="hero-description">
+                    At Nurture the Roots, I blend 15+ years of postpartum and newborn care expertise with an approach inspired by both ancient wisdom and modern understanding. I believe that when we tend carefully to our beginnings, we create the foundation for a lifetime of wellbeing.
+                </p>
+                <a href="#contact" class="cta-button">Begin Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Expert Support for Your Growing Family</h2>
+                    <p><strong>Comprehensive Postpartum Support</strong></p>
+                    <p>The postpartum chapter unfolds differently for every family. Whether seeking restful nights, confident newborn care, or expert guidance through those early weeks, my holistic approach meets you exactly where you are, creating space for connection, recovery, and joyful family beginnings.</p>
+                </div>
+                <div class="credentials">
+                    <h3>Professional Credentials & Training</h3>
+                    <ul>
+                        <li>ProDoula Certified Postpartum & Infant Care Doula (2024)</li>
+                        <li>CAPPA Lactation Educator Training (2021)</li>
+                        <li>Infant Massage Training (2011)</li>
+                        <li>Brazelton Touchpoints Center Certifications</li>
+                        <li>Licensed Massage Therapist (2009)</li>
+                        <li>American Red Cross CPR/First Aid Certified</li>
+                        <li>15+ years supporting 500+ families</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Compassionate Care Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>In-Home Postpartum Support</h3>
+                    <p>Those early weeks after birth can feel both magical and overwhelming. I create a nurturing sanctuary in your home with hands-on recovery support, emotional companionship, and practical help that keeps your household running smoothly.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Evidence-Based Newborn Care</h3>
+                    <p>Wondering what your baby is trying to tell you? Babies speak their own language of cues and behaviors. Drawing from specialized training in newborn development, I help you understand your little one's unique communication style and needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tailored Consultations</h3>
+                    <p>Facing a specific challenge in your parenting journey? Sometimes you need focused guidance for immediate concerns. These personalized sessions address your most pressing questions with compassionate, evidence-based support tailored to your unique situation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Overnight Support</h3>
+                    <p>Restful nights for growing families. I provide attentive newborn care while you replenish your energy - feeding support, gentle soothing, and diaper changes all handled with loving care while you sleep.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Lactation Support & Education</h3>
+                    <p>Evidence-based guidance for your feeding journey, whether breastfeeding, bottle-feeding, or pumping. I help you establish confidence in nourishing your little one with patience and understanding.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Family Bonding Support</h3>
+                    <p>Gentle guidance for nurturing strong connections from the beginning, with special sensitivity to diverse family structures and opportunities to build the supportive network that modern parents often find missing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey">
+        <div class="container">
+            <h2>My Journey to Nurture The Roots</h2>
+            <div class="journey-content">
+                <h3>Finding My Calling</h3>
+                <p>Some paths choose us rather than the other way around. At just 19 years old, I discovered what a doula was, and something awakened within me – a recognition so profound it felt like remembering rather than learning. This wasn't a career I found through careful planning; it was a calling that resonated in the deepest parts of who I am.</p>
+                
+                <p>Now, after 15+ years supporting families through life's most transformative transitions, I understand that this journey was always waiting for me.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="beliefs">
+        <div class="container">
+            <h3>My approach is built on several core beliefs:</h3>
+            <div class="beliefs-list">
+                <div class="belief-item">
+                    <p>The postpartum period deserves as much attention and care as birth itself</p>
+                </div>
+                <div class="belief-item">
+                    <p>Every family has its own unique rhythm and wisdom</p>
+                </div>
+                <div class="belief-item">
+                    <p>Babies communicate clearly when we learn to listen</p>
+                </div>
+                <div class="belief-item">
+                    <p>The wisdom of traditional practices has profound value alongside modern understanding</p>
+                </div>
+                <div class="belief-item">
+                    <p>When we support parents, we strengthen entire communities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promise">
+        <div class="container">
+            <h2>My Promise to You</h2>
+            <p>When you invite me into your home and heart during this transformative time, I bring not only my years of professional experience but also the compassion born from my own story.</p>
+            
+            <p>I understand the vulnerability of new beginnings and the courage it takes to ask for support.</p>
+            
+            <p>I promise to meet you exactly where you are—without judgment, with deep respect for your unique path, and with unwavering faith in your family's ability to thrive.</p>
+            
+            <p class="signature">Holding space for your new beginning.</p>
+            
+            <p class="signature"><strong>Ashlee McKenzie</strong></p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to Begin Your Supported Journey?</h2>
+            <p>Let's create a nurturing foundation for your growing family</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>hello@nurturetheroots.org</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📱 Phone</h3>
+                    <p>Available for consultation calls</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🌍 Service Area</h3>
+                    <p>San Francisco Bay Area</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🕐 Availability</h3>
+                    <p>Overnight & daytime support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nurture The Roots. Compassionate postpartum doula and newborn care specialist services.</p>
+            <p><em>When parents are nurtured, families flourish.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and belief items
+        document.querySelectorAll('.service-card, .belief-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
