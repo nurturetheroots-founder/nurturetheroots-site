@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media — Nurture The Roots™</title>
-    <meta name="description" content="Videos, talks, and conversations on postpartum care, the fourth trimester, and lineage-rooted family wisdom.">
-    <meta http-equiv="refresh" content="0; url=stories.html">
+    <title>Stories — Nurture The Roots™</title>
+    <meta name="description" content="Words from the families I've served, and conversations on postpartum care, the fourth trimester, and lineage-rooted family wisdom.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,6 +24,18 @@
             height: 100%;
             border: 0;
         }
+        .video-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: .75rem;
+            color: var(--soil-soft);
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        .video-placeholder svg { opacity: .35; }
     </style>
 </head>
 <body>
@@ -39,10 +50,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="approach.html">Approach</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="media.html" class="active">Media</a></li>
+            <li><a href="stories.html" class="active">Stories</a></li>
+            <li><a href="blog.html">Journal</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -52,38 +61,88 @@
 <!-- Page hero -->
 <section class="page-hero">
     <div class="container">
-        <span class="eyebrow">Media</span>
-        <h1>Conversations &amp; teachings.</h1>
-        <p class="subhead">Short videos, podcast clips, and reflections on the work of postpartum care.</p>
+        <span class="eyebrow">Stories</span>
+        <h1>Words &amp; voices.</h1>
+        <p class="subhead">Testimonials from families I've held, and conversations on postpartum care.</p>
     </div>
 </section>
 
-<!-- YouTube videos -->
+<!-- Testimonials -->
 <section class="section section-light">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">From Families I've Served</span>
+            <h2>Words from the families I've held.</h2>
+        </div>
+        <div class="grid grid-3">
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Ashlee brought a calm into our home that we didn't know we needed. She held us all so gently."</p>
+                <p class="testimonial-name">— A San Francisco family</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Her steadiness and wisdom helped me trust myself as a new mother. I am forever changed."</p>
+                <p class="testimonial-name">— A first-time mother</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Working with Ashlee felt like having an older sister and a wise guide at the same time."</p>
+                <p class="testimonial-name">— A Bay Area family</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"She made the nights bearable, and the mornings beautiful. We will recommend her forever."</p>
+                <p class="testimonial-name">— A Mission District family</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Ashlee held us with such patience. She felt like family by the end of our first week."</p>
+                <p class="testimonial-name">— A second-time mother</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Hers is the most attuned, intelligent, and grounded care I have ever received."</p>
+                <p class="testimonial-name">— A Noe Valley family</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Google reviews CTA -->
+<section class="section section-sage">
+    <div class="container">
+        <div class="reading" style="text-align: center; margin: 0 auto;">
+            <span class="eyebrow">From Google Reviews</span>
+            <h2>You can also read more on Google.</h2>
+            <p>I am grateful for every family who has chosen to share their experience. Their words carry me.</p>
+            <a href="#" class="btn" style="margin-top: 2rem;">View Google Reviews</a>
+        </div>
+    </div>
+</section>
+
+<!-- YouTube -->
+<section class="section section-sand">
     <div class="container">
         <div class="section-head">
             <span class="eyebrow">YouTube</span>
             <h2>From my channel</h2>
         </div>
         <div class="grid grid-2">
-            <div class="video-frame">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        title="Nurture The Roots — YouTube"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="video-frame video-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                Video coming soon
             </div>
-            <div class="video-frame">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        title="Nurture The Roots — YouTube"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="video-frame video-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                Video coming soon
             </div>
         </div>
     </div>
 </section>
 
-<!-- TikTok embeds -->
-<section class="section section-sand">
+<!-- TikTok -->
+<section class="section section-light">
     <div class="container">
         <div class="section-head">
             <span class="eyebrow">TikTok</span>
@@ -125,15 +184,13 @@
                 <h4>Explore</h4>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="approach.html">Approach</a>
-                <a href="blog.html">Blog</a>
-                <a href="media.html">Media</a>
+                <a href="stories.html">Stories</a>
+                <a href="blog.html">Journal</a>
             </div>
             <div class="footer-col">
                 <h4>Connect</h4>
                 <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
-                <a href="testimonials.html">Testimonials</a>
                 <a href="mailto:am.nurturetr@proton.me">Email</a>
             </div>
         </div>
