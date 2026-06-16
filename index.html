@@ -1,568 +1,1286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurture The Roots - Compassionate Postpartum Doula Services</title>
-    <meta name="description" content="Certified postpartum doula and newborn care specialist supporting Bay Area families through their fourth trimester journey with gentle guidance and overnight support.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurture The Roots — Postpartum Doula | Bay Area</title>
+  <meta name="description" content="Certified postpartum doula and newborn care specialist Ashlee McKenzie supports Bay Area families through the fourth trimester with expert overnight care, lactation support, and compassionate guidance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Variables ─────────────────────────────────────── */
+    :root {
+      --sage:        #4a5e45;
+      --sage-light:  #6b7f65;
+      --sage-dark:   #1e2d1e;
+      --rose:        #c4848a;
+      --rose-light:  #d9a8ac;
+      --cream:       #faf8f4;
+      --cream-dark:  #f0ebe0;
+      --white:       #ffffff;
+      --ink:         #1e2d1e;
+      --ink-mid:     #3d4f3a;
+      --ink-light:   #6b7d65;
+      --border:      rgba(74,94,69,0.12);
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #2c3e2d;
-            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
-        }
+      --font-head:   'Cormorant Garamond', Georgia, serif;
+      --font-body:   'Inter', system-ui, sans-serif;
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      --r-sm:  6px;
+      --r-md: 14px;
+      --r-lg: 24px;
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+      --sh-sm: 0 2px 10px rgba(0,0,0,.06);
+      --sh-md: 0 6px 24px rgba(0,0,0,.09);
+      --sh-lg: 0 12px 48px rgba(0,0,0,.12);
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      --ease: 0.28s ease;
+      --max:  1100px;
+    }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #f7f5f1;
-        }
+    /* ── Reset ─────────────────────────────────────────── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.72;
+      color: var(--ink-mid);
+      background: var(--cream);
+    }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+    img { display:block; max-width:100%; }
+    a   { color: inherit; }
 
-        .nav-links a:hover {
-            color: #d4a5a5;
-        }
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
-            padding: 4rem 0;
-            text-align: center;
-        }
+    /* ── Typography helpers ────────────────────────────── */
+    h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.2; color: var(--ink); }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 500; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 500; }
+    h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); font-weight: 500; }
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #2c3e2d;
-        }
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: .65rem;
+    }
 
-        .hero-tagline {
-            font-size: 1.2rem;
-            color: #7a8471;
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
+    .divider {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--rose);
+      border-radius: 2px;
+      margin: 1rem auto 0;
+    }
 
-        .hero-description {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #2c3e2d;
-        }
+    /* ── Buttons ───────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: .82rem 2rem;
+      border-radius: 50px;
+      transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
+      cursor: pointer;
+      border: none;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #d4a5a5 0%, #c9a9a9 100%);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .btn-primary {
+      background: var(--rose);
+      color: var(--white);
+      box-shadow: 0 4px 18px rgba(196,132,138,.32);
+    }
+    .btn-primary:hover {
+      background: #b57278;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196,132,138,.42);
+    }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+    .btn-outline-light {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,.7);
+      color: var(--white);
+    }
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,.12);
+      transform: translateY(-2px);
+    }
 
-        /* About Section */
-        .about {
-            padding: 4rem 0;
-            background: white;
-        }
+    .btn-outline-sage {
+      background: transparent;
+      border: 2px solid var(--sage);
+      color: var(--sage);
+    }
+    .btn-outline-sage:hover {
+      background: var(--sage);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
+    /* ── Header ────────────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--sage-dark);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06), var(--sh-sm);
+    }
 
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e2d;
-        }
+    nav.container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
 
-        .about-text p {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            color: #2c3e2d;
-        }
+    .logo {
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: .01em;
+    }
+    .logo span { color: var(--rose-light); }
 
-        .credentials {
-            background: #f7f5f1;
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid #7a8471;
-        }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.25rem;
+    }
+    .nav-links a {
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.78);
+      text-decoration: none;
+      transition: color var(--ease);
+    }
+    .nav-links a:hover { color: var(--rose-light); }
 
-        .credentials h3 {
-            color: #2c3e2d;
-            margin-bottom: 1rem;
-        }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
 
-        .credentials ul {
-            list-style: none;
-        }
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: all var(--ease);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        .credentials li {
-            margin-bottom: 0.5rem;
-            padding-left: 1rem;
-            position: relative;
-        }
+    /* Mobile nav */
+    .mobile-menu {
+      display: none;
+      background: var(--sage-dark);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul {
+      list-style: none;
+      padding: 1rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+    .mobile-menu a {
+      display: block;
+      padding: .65rem 0;
+      font-size: .9rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.82);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: color var(--ease);
+    }
+    .mobile-menu a:hover { color: var(--rose-light); }
 
-        .credentials li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #7a8471;
-            font-weight: bold;
-        }
+    /* ── Hero ──────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 88vh;
+    }
 
-        /* Services Section */
-        .services {
-            padding: 4rem 0;
-            background: #f7f5f1;
-        }
+    .hero-text {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem 5rem 3rem;
+    }
 
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2c3e2d;
-        }
+    .hero-text h1 {
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+    .hero-tagline {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--sage-light);
+      margin-bottom: 1.5rem;
+    }
 
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-top: 4px solid #d4a5a5;
-        }
+    .hero-description {
+      font-size: 1rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 420px;
+    }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
+    .hero-actions {
+      display: flex;
+      gap: .85rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
 
-        .service-card h3 {
-            color: #2c3e2d;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
+    .hero-trust {
+      display: flex;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
 
-        .service-card p {
-            color: #7a8471;
-        }
+    .trust-stat strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: .2rem;
+    }
 
-        /* Journey Section */
-        .journey {
-            padding: 4rem 0;
-            background: white;
-        }
+    .trust-stat span {
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: var(--ink-light);
+      text-transform: uppercase;
+    }
 
-        .journey h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2c3e2d;
-        }
+    /* Hero photo ── UPLOAD: images/hero.jpg
+       Use the photo of Ashlee standing by the large window
+       in white tank top, holding baby against her chest (backlit, beautiful light) */
+    .hero-photo {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream-dark);
+    }
 
-        .journey-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
 
-        .journey-content h3 {
-            color: #d4a5a5;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
+    .hero-badge {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      background: rgba(30,45,30,.85);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: .85rem 1.25rem;
+      border-radius: var(--r-md);
+      font-size: .8rem;
+      line-height: 1.5;
+      border-left: 3px solid var(--rose-light);
+    }
 
-        .journey-content p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e2d;
-        }
+    .hero-badge strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 400;
+    }
 
-        /* Core Beliefs */
-        .beliefs {
-            background: #f7f5f1;
-            padding: 3rem 0;
-        }
+    /* ── Section Scaffolding ───────────────────────────── */
+    section { padding: 5.5rem 0; }
 
-        .beliefs h3 {
-            color: #2c3e2d;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
+    .section-head {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-head h2 { margin-bottom: .5rem; }
+    .section-head p {
+      font-size: 1.02rem;
+      color: var(--ink-light);
+      max-width: 520px;
+      margin: .75rem auto 0;
+    }
 
-        .beliefs-list {
-            max-width: 700px;
-            margin: 0 auto;
-            display: grid;
-            gap: 1rem;
-        }
+    /* ── About ─────────────────────────────────────────── */
+    .about { background: var(--white); }
 
-        .belief-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #d4a5a5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
 
-        /* Promise Section */
-        .promise {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
-            color: white;
-            text-align: center;
-        }
+    /* About photo ── UPLOAD: images/about.jpg
+       Use the group consultation photo: Ashlee (white top) with the
+       couple and baby — reading the Fourth Trimester book, plants in background */
+    .about-photo {
+      position: relative;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--cream-dark);
+      box-shadow: var(--sh-lg);
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-photo-accent {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 55%;
+      aspect-ratio: 1;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 5px solid var(--white);
+      box-shadow: var(--sh-md);
+      background: var(--cream-dark);
+    }
+    .about-photo-accent img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .promise h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
+    .about-text { padding-right: 1rem; }
+    .about-text h2 { margin-bottom: 1.25rem; }
+    .about-text p { color: var(--ink-light); font-size: 1rem; margin-bottom: 1rem; }
+    .about-text .btn { margin-top: .75rem; }
 
-        .promise p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 1rem;
-        }
+    /* Credentials card */
+    .creds {
+      margin-top: 2rem;
+      background: var(--cream);
+      border-radius: var(--r-md);
+      border-left: 3px solid var(--sage);
+      padding: 1.5rem;
+    }
+    .creds-title {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 1rem;
+    }
+    .creds ul { list-style: none; }
+    .creds li {
+      display: flex;
+      gap: .6rem;
+      align-items: flex-start;
+      font-size: .9rem;
+      color: var(--ink-mid);
+      padding: .4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .creds li:last-child { border-bottom: none; }
+    .creds li::before {
+      content: "✓";
+      color: var(--sage);
+      font-weight: 700;
+      font-size: .8rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
 
-        .promise .signature {
-            font-style: italic;
-            font-size: 1.1rem;
-            margin-top: 2rem;
-        }
+    /* ── Services ──────────────────────────────────────── */
+    .services { background: var(--cream); }
 
-        /* Contact Section */
-        .contact {
-            padding: 4rem 0;
-            background: #f7f5f1;
-            text-align: center;
-        }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
 
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #2c3e2d;
-        }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      box-shadow: var(--sh-sm);
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sh-md);
+    }
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+    /* Service card photos ── see UPLOAD notes below */
+    .service-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: var(--cream-dark);
+    }
 
-        .contact-item {
-            padding: 1.5rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+    .service-body {
+      padding: 1.4rem 1.5rem 1.6rem;
+      border-top: 2px solid var(--rose-light);
+    }
+    .service-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
+      color: var(--ink);
+    }
+    .service-body p {
+      font-size: .88rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+    }
 
-        .contact-item h3 {
-            margin-bottom: 0.5rem;
-            color: #d4a5a5;
-        }
+    /* ── Journey / Story ───────────────────────────────── */
+    /* Journey photo ── UPLOAD: images/journey.jpg
+       Use the STUNNING plant-room photo — woman in tan pants / white top
+       standing by large window holding baby, surrounded by hanging plants. */
+    .journey {
+      position: relative;
+      padding: 0;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+    }
+    .journey-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .journey-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .journey-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(20,32,20,.82) 0%, rgba(20,32,20,.55) 55%, rgba(20,32,20,.2) 100%);
+    }
 
-        .contact-item p {
-            color: #2c3e2d;
-        }
+    .journey-content {
+      position: relative;
+      z-index: 1;
+      padding: 5rem 0;
+    }
+    .journey-inner {
+      max-width: 540px;
+    }
+    .journey-inner .eyebrow { color: var(--rose-light); }
+    .journey-inner h2 { color: white; margin-bottom: 1.25rem; }
+    .journey-inner p {
+      color: rgba(255,255,255,.82);
+      font-size: 1rem;
+      line-height: 1.82;
+      margin-bottom: 1rem;
+    }
+    .journey-inner .btn { margin-top: .75rem; }
 
-        /* Footer */
-        footer {
-            background: #2c3e2d;
-            color: #f7f5f1;
-            text-align: center;
-            padding: 2rem 0;
-        }
+    /* ── Core Beliefs ──────────────────────────────────── */
+    .beliefs { background: var(--sage-dark); }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+    .beliefs .section-head h2 { color: white; }
+    .beliefs .section-head p { color: rgba(255,255,255,.62); }
+    .beliefs .divider { background: var(--rose-light); }
 
-            .hero-content h1 {
-                font-size: 2rem;
-            }
+    .beliefs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .belief-item {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-left: 3px solid var(--rose-light);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--r-sm);
+      font-size: .93rem;
+      color: rgba(255,255,255,.85);
+      line-height: 1.65;
+      transition: background var(--ease);
+    }
+    .belief-item:hover { background: rgba(255,255,255,.12); }
 
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+    /* ── Photo Gallery Strip ───────────────────────────── */
+    /* Gallery photos ── UPLOAD: images/gallery-1.jpg through gallery-4.jpg
+       Suggested assignments:
+         gallery-1.jpg → Mom in rocking chair holding baby (nursery shot)
+         gallery-2.jpg → Ashlee laughing with baby on her lap
+         gallery-3.jpg → Ashlee kissing baby's head from behind
+         gallery-4.jpg → Baby in bassinet with gentle hand on chest */
+    .gallery {
+      padding: 0;
+      overflow: hidden;
+    }
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 360px;
+    }
+    .gallery-strip figure {
+      overflow: hidden;
+    }
+    .gallery-strip figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .gallery-strip figure:hover img { transform: scale(1.05); }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    /* ── Promise ───────────────────────────────────────── */
+    .promise { background: var(--white); }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .promise-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
 
-        .hero-content, .service-card, .belief-item {
-            animation: fadeInUp 0.8s ease-out;
-        }
-    </style>
+    .promise-text .eyebrow { margin-bottom: .65rem; }
+    .promise-text h2 { margin-bottom: 1.5rem; }
+    .promise-text p {
+      color: var(--ink-light);
+      font-size: 1rem;
+      line-height: 1.82;
+      margin-bottom: 1rem;
+    }
+    .promise-sig {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .promise-sig p {
+      font-family: var(--font-head);
+      font-style: italic;
+      color: var(--sage);
+      font-size: 1.05rem;
+      margin-bottom: .2rem;
+    }
+    .promise-sig strong {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      color: var(--ink);
+      font-style: normal;
+    }
+
+    /* Promise photo ── UPLOAD: images/promise.jpg
+       Use the intimate photo of Ashlee with her eyes closed,
+       nuzzling the baby's head (white top, by window, backlit) */
+    .promise-photo {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--cream-dark);
+      box-shadow: var(--sh-lg);
+    }
+    .promise-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Contact ───────────────────────────────────────── */
+    .contact { background: var(--cream); }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info h2 { margin-bottom: 1rem; }
+    .contact-info > p {
+      color: var(--ink-light);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-items { display: flex; flex-direction: column; gap: .85rem; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border-radius: var(--r-md);
+      box-shadow: var(--sh-sm);
+      text-decoration: none;
+      transition: box-shadow var(--ease), transform var(--ease);
+    }
+    .contact-item:hover { box-shadow: var(--sh-md); transform: translateX(3px); }
+    .contact-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contact-item-text label {
+      display: block;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: .15rem;
+    }
+    .contact-item-text span {
+      font-size: .95rem;
+      color: var(--ink-mid);
+    }
+
+    /* Contact form */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 2.5rem;
+      box-shadow: var(--sh-md);
+    }
+    .contact-form-wrap h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+      margin-bottom: 1.1rem;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--font-body);
+      font-size: .93rem;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: .7rem .9rem;
+      width: 100%;
+      transition: border-color var(--ease), box-shadow var(--ease);
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--sage-light);
+      box-shadow: 0 0 0 3px rgba(74,94,69,.12);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%;
+      padding: .95rem;
+      font-size: .85rem;
+    }
+
+    .form-note {
+      font-size: .78rem;
+      color: var(--ink-light);
+      text-align: center;
+      margin-top: .75rem;
+    }
+
+    /* ── Footer ────────────────────────────────────────── */
+    footer {
+      background: var(--sage-dark);
+      color: rgba(255,255,255,.6);
+      padding: 2.75rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-brand {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      color: white;
+    }
+    .footer-brand span { font-style: italic; }
+    .footer-tagline {
+      font-family: var(--font-head);
+      font-style: italic;
+      color: rgba(255,255,255,.5);
+      font-size: .95rem;
+      margin-top: .2rem;
+    }
+    .footer-right { font-size: .8rem; text-align: right; line-height: 1.7; }
+
+    /* ── Scroll Reveal ─────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text { padding: 4rem 2rem; }
+      .hero-photo { height: 55vw; min-height: 320px; }
+      .about-grid, .promise-wrap, .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .about-photo { max-width: 500px; margin: 0 auto; }
+      .promise-photo { max-width: 500px; margin: 0 auto; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-strip { grid-template-columns: repeat(2, 1fr); height: auto; }
+      .gallery-strip figure { height: 260px; }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 4rem 0; }
+      .nav-links, .nav-cta .btn { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-right { text-align: center; }
+      .beliefs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Nurture The Roots</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#journey">My Journey</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>When Parents Are Nurtured, Families Flourish</h1>
-                <p class="hero-tagline">"Holding space for new beginnings"</p>
-                <p class="hero-description">
-                    At Nurture the Roots, I blend 15+ years of postpartum and newborn care expertise with an approach inspired by both ancient wisdom and modern understanding. I believe that when we tend carefully to our beginnings, we create the foundation for a lifetime of wellbeing.
-                </p>
-                <a href="#contact" class="cta-button">Begin Your Journey</a>
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <nav class="container">
+    <a href="#" class="logo">Nurture <span>The Roots</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#journey">My Story</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary" style="padding:.6rem 1.4rem;font-size:.75rem;">Book a Consult</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#journey">My Story</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" style="color:var(--rose-light);">Book a Free Consult →</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<!-- HERO PHOTO: Upload images/hero.jpg
+     → Use the portrait of Ashlee in white tank top, standing by the large window,
+       eyes closed, gently nuzzling the baby held against her chest (backlit, airy light).
+       Best hero photo — emotional, luminous, professional. -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-text">
+    <span class="eyebrow">Bay Area Postpartum Doula</span>
+    <h1>When Parents Are Nurtured,<br>Families Flourish</h1>
+    <p class="hero-tagline">"Holding space for new beginnings"</p>
+    <p class="hero-description">
+      Blending 15+ years of postpartum and newborn care expertise with ancient wisdom and modern understanding — creating the nurturing foundation every new family deserves.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Begin Your Journey</a>
+      <a href="#services" class="btn btn-outline-sage">See Services</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-stat">
+        <strong>15+</strong>
+        <span>Years Experience</span>
+      </div>
+      <div class="trust-stat">
+        <strong>500+</strong>
+        <span>Families Supported</span>
+      </div>
+      <div class="trust-stat">
+        <strong>Bay<br>Area</strong>
+        <span>Service Area</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="images/hero.jpg" alt="Ashlee McKenzie, postpartum doula, gently holding a newborn" loading="eager">
+    <div class="hero-badge">
+      <strong>Ashlee McKenzie</strong>
+      ProDoula Certified · Licensed Massage Therapist<br>CPR/First Aid Certified
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<!-- ABOUT PHOTO: Upload images/about.jpg
+     → Use the wide consultation shot: Ashlee (white top) sitting with the couple
+       and newborn baby — reading the "Fourth Trimester" book, plants in background.
+       Warm, professional, shows her in action with a real family.
+     ABOUT ACCENT PHOTO: Upload images/about-accent.jpg
+     → Use the close-up of Ashlee writing on notepad with baby/family in background.
+       This small inset photo adds depth and storytelling. -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="images/about.jpg" alt="Ashlee consulting with a new family during postpartum support visit">
+        <div class="about-photo-accent">
+          <img src="images/about-accent.jpg" alt="Ashlee reviewing care notes during a home visit">
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <span class="eyebrow">Expert Postpartum Care</span>
+        <h2>Support That Meets You Exactly Where You Are</h2>
+        <p>The postpartum chapter unfolds differently for every family. Whether seeking restful nights, confident newborn care, or expert guidance through those early weeks — my holistic approach adapts to your unique needs.</p>
+        <p>I create space for connection, recovery, and joyful family beginnings, with compassion at the center of everything I do.</p>
+
+        <div class="creds">
+          <div class="creds-title">Professional Credentials &amp; Training</div>
+          <ul>
+            <li>ProDoula Certified Postpartum &amp; Infant Care Doula (2024)</li>
+            <li>CAPPA Lactation Educator Training (2021)</li>
+            <li>Infant Massage Training (2011)</li>
+            <li>Brazelton Touchpoints Center Certifications</li>
+            <li>Licensed Massage Therapist (2009)</li>
+            <li>American Red Cross CPR / First Aid Certified</li>
+            <li>15+ years · 500+ families supported</li>
+          </ul>
+        </div>
+
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Schedule a Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<!-- SERVICE PHOTOS — one image per card:
+     services/postpartum.jpg  → Doula helping parents put baby in bassinet (parents smiling, bedroom)
+     services/newborn.jpg     → Baby lying in bassinet in terracotta wrap, eyes open, hand gently resting on baby
+     services/consult.jpg     → Ashlee with family on couch, clipboard/binder, consulting
+     services/overnight.jpg   → Baby smiling up from parent's lap (close-up, warm light)
+     services/lactation.jpg   → Close-up of breastfeeding / mom and baby
+     services/bonding.jpg     → Ashlee kissing baby's head from behind (back-of-head shot, tender) -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What I Offer</span>
+      <h2>Compassionate Care Services</h2>
+      <p>Every service is tailored to support your family's unique needs during the fourth trimester and beyond.</p>
+      <span class="divider"></span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <img class="service-img" src="images/services/postpartum.jpg" alt="Doula providing in-home postpartum support">
+        <div class="service-body">
+          <h3>In-Home Postpartum Support</h3>
+          <p>Hands-on recovery support, emotional companionship, and practical household help during those first precious weeks.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-img" src="images/services/newborn.jpg" alt="Newborn care and education">
+        <div class="service-body">
+          <h3>Evidence-Based Newborn Care</h3>
+          <p>I help you understand your baby's unique cues and communication style using specialized newborn development training.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-img" src="images/services/consult.jpg" alt="Personalized postpartum consultation">
+        <div class="service-body">
+          <h3>Tailored Consultations</h3>
+          <p>Focused, compassionate guidance for your most pressing parenting questions — personalized to your situation.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-img" src="images/services/overnight.jpg" alt="Overnight newborn care support">
+        <div class="service-body">
+          <h3>Overnight Support</h3>
+          <p>Attentive newborn care while you rest — feeding support, gentle soothing, and diaper changes handled with loving care.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-img" src="images/services/lactation.jpg" alt="Lactation support and breastfeeding education">
+        <div class="service-body">
+          <h3>Lactation Support &amp; Education</h3>
+          <p>Evidence-based feeding guidance for breastfeeding, bottle-feeding, or pumping — with patience and understanding.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-img" src="images/services/bonding.jpg" alt="Family bonding support">
+        <div class="service-body">
+          <h3>Family Bonding Support</h3>
+          <p>Nurturing strong connections from the start, with sensitivity to diverse family structures and community building.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ JOURNEY ═══════════ -->
+<!-- JOURNEY BACKGROUND PHOTO: Upload images/journey.jpg
+     → Use the STUNNING plant-filled room photo — Ashlee in tan/cream pants
+       and white tank top, standing barefoot by the huge grid window,
+       holding baby, surrounded by cascading tropical plants.
+       This is your most dramatic, atmospheric image — perfect full-bleed. -->
+<section id="journey" class="journey">
+  <div class="journey-bg">
+    <img src="images/journey.jpg" alt="Ashlee McKenzie holding a newborn in a warm, plant-filled home">
+  </div>
+  <div class="journey-content container">
+    <div class="journey-inner reveal">
+      <span class="eyebrow">My Story</span>
+      <h2>My Journey to<br>Nurture The Roots</h2>
+      <p>Some paths choose us rather than the other way around. At just 19 years old, I discovered what a doula was — and something awakened within me. A recognition so profound it felt like remembering rather than learning.</p>
+      <p>This wasn't a career I found through careful planning. It was a calling that resonated in the deepest parts of who I am. Now, after 15+ years supporting families through life's most transformative transitions, I know this journey was always waiting for me.</p>
+      <a href="#contact" class="btn btn-outline-light">Connect with Ashlee</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BELIEFS ═══════════ -->
+<section class="beliefs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:rgba(255,255,255,.6)">My Philosophy</span>
+      <h2 style="color:white">Core Beliefs</h2>
+      <p>The values that guide everything I do.</p>
+      <span class="divider" style="background:var(--rose-light)"></span>
+    </div>
+    <div class="beliefs-grid">
+      <div class="belief-item reveal">The postpartum period deserves as much attention and care as birth itself</div>
+      <div class="belief-item reveal">Every family has its own unique rhythm and wisdom</div>
+      <div class="belief-item reveal">Babies communicate clearly when we learn to listen</div>
+      <div class="belief-item reveal">The wisdom of traditional practices has profound value alongside modern understanding</div>
+      <div class="belief-item reveal">When we support parents, we strengthen entire communities</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GALLERY STRIP ═══════════ -->
+<!-- GALLERY PHOTOS: Upload 4 images into images/gallery/
+     gallery-1.jpg → Mom in rocking chair holding baby (warm nursery, side angle)
+     gallery-2.jpg → Ashlee laughing face-to-face with baby on her lap (joyful, expressive)
+     gallery-3.jpg → Ashlee kissing baby's cheek — baby in terracotta wrap on bed
+     gallery-4.jpg → Ashlee + parents + baby on couch — all three adults bonding with newborn -->
+<section class="gallery" aria-label="Photo gallery">
+  <div class="gallery-strip">
+    <figure><img src="images/gallery/gallery-1.jpg" alt="Mother bonding with newborn in nursery" loading="lazy"></figure>
+    <figure><img src="images/gallery/gallery-2.jpg" alt="Joyful moment with newborn" loading="lazy"></figure>
+    <figure><img src="images/gallery/gallery-3.jpg" alt="Tender newborn care moment" loading="lazy"></figure>
+    <figure><img src="images/gallery/gallery-4.jpg" alt="Family bonding with doula support" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ═══════════ PROMISE ═══════════ -->
+<!-- PROMISE PHOTO: Upload images/promise.jpg
+     → Use the portrait of Ashlee in white tank top standing by window,
+       eyes closed, kissing the baby's head — backlit by natural light.
+       Pure, intimate, and emotionally powerful. Reinforces the "promise" message. -->
+<section class="promise">
+  <div class="container">
+    <div class="promise-wrap">
+      <div class="promise-text reveal">
+        <span class="eyebrow">My Commitment</span>
+        <h2>My Promise to You</h2>
+        <p>When you invite me into your home and heart during this transformative time, I bring not only my years of professional experience — but also the compassion born from my own story.</p>
+        <p>I understand the vulnerability of new beginnings and the courage it takes to ask for support. I promise to meet you exactly where you are: without judgment, with deep respect for your unique path, and with unwavering faith in your family's ability to thrive.</p>
+        <div class="promise-sig">
+          <p>Holding space for your new beginning.</p>
+          <strong>Ashlee McKenzie</strong>
+        </div>
+      </div>
+
+      <div class="promise-photo reveal">
+        <img src="images/promise.jpg" alt="Ashlee McKenzie with a newborn — quiet, tender moment by the window">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Ready to Begin Your Supported Journey?</h2>
+        <p>Let's create a nurturing foundation for your growing family. Reach out for a free 30-minute consultation — no pressure, just a warm conversation.</p>
+
+        <div class="contact-items">
+          <a href="mailto:am.nurturetr@proton.me" class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-item-text">
+              <label>Email</label>
+              <span>am.nurturetr@proton.me</span>
             </div>
-        </div>
-    </section>
+          </a>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Expert Support for Your Growing Family</h2>
-                    <p><strong>Comprehensive Postpartum Support</strong></p>
-                    <p>The postpartum chapter unfolds differently for every family. Whether seeking restful nights, confident newborn care, or expert guidance through those early weeks, my holistic approach meets you exactly where you are, creating space for connection, recovery, and joyful family beginnings.</p>
-                </div>
-                <div class="credentials">
-                    <h3>Professional Credentials & Training</h3>
-                    <ul>
-                        <li>ProDoula Certified Postpartum & Infant Care Doula (2024)</li>
-                        <li>CAPPA Lactation Educator Training (2021)</li>
-                        <li>Infant Massage Training (2011)</li>
-                        <li>Brazelton Touchpoints Center Certifications</li>
-                        <li>Licensed Massage Therapist (2009)</li>
-                        <li>American Red Cross CPR/First Aid Certified</li>
-                        <li>15+ years supporting 500+ families</li>
-                    </ul>
-                </div>
+          <a href="tel:4083078295" class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div class="contact-item-text">
+              <label>Phone / Text</label>
+              <span>408-307-8295</span>
             </div>
-        </div>
-    </section>
+          </a>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Compassionate Care Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>In-Home Postpartum Support</h3>
-                    <p>Those early weeks after birth can feel both magical and overwhelming. I create a nurturing sanctuary in your home with hands-on recovery support, emotional companionship, and practical help that keeps your household running smoothly.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Evidence-Based Newborn Care</h3>
-                    <p>Wondering what your baby is trying to tell you? Babies speak their own language of cues and behaviors. Drawing from specialized training in newborn development, I help you understand your little one's unique communication style and needs.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Tailored Consultations</h3>
-                    <p>Facing a specific challenge in your parenting journey? Sometimes you need focused guidance for immediate concerns. These personalized sessions address your most pressing questions with compassionate, evidence-based support tailored to your unique situation.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Overnight Support</h3>
-                    <p>Restful nights for growing families. I provide attentive newborn care while you replenish your energy - feeding support, gentle soothing, and diaper changes all handled with loving care while you sleep.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Lactation Support & Education</h3>
-                    <p>Evidence-based guidance for your feeding journey, whether breastfeeding, bottle-feeding, or pumping. I help you establish confidence in nourishing your little one with patience and understanding.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Family Bonding Support</h3>
-                    <p>Gentle guidance for nurturing strong connections from the beginning, with special sensitivity to diverse family structures and opportunities to build the supportive network that modern parents often find missing.</p>
-                </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div class="contact-item-text">
+              <label>Service Area</label>
+              <span>San Francisco Bay Area</span>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <section id="journey" class="journey">
-        <div class="container">
-            <h2>My Journey to Nurture The Roots</h2>
-            <div class="journey-content">
-                <h3>Finding My Calling</h3>
-                <p>Some paths choose us rather than the other way around. At just 19 years old, I discovered what a doula was, and something awakened within me – a recognition so profound it felt like remembering rather than learning. This wasn't a career I found through careful planning; it was a calling that resonated in the deepest parts of who I am.</p>
-                
-                <p>Now, after 15+ years supporting families through life's most transformative transitions, I understand that this journey was always waiting for me.</p>
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div class="contact-item-text">
+              <label>Availability</label>
+              <span>Overnight &amp; Daytime Support</span>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="beliefs">
-        <div class="container">
-            <h3>My approach is built on several core beliefs:</h3>
-            <div class="beliefs-list">
-                <div class="belief-item">
-                    <p>The postpartum period deserves as much attention and care as birth itself</p>
-                </div>
-                <div class="belief-item">
-                    <p>Every family has its own unique rhythm and wisdom</p>
-                </div>
-                <div class="belief-item">
-                    <p>Babies communicate clearly when we learn to listen</p>
-                </div>
-                <div class="belief-item">
-                    <p>The wisdom of traditional practices has profound value alongside modern understanding</p>
-                </div>
-                <div class="belief-item">
-                    <p>When we support parents, we strengthen entire communities</p>
-                </div>
+      <div class="contact-form-wrap reveal">
+        <h3>Send a Message</h3>
+        <!-- Formspree: sign up free at formspree.io, create a form,
+             then replace YOUR_FORM_ID below with your actual ID -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from Nurture The Roots website">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="Jane" required>
             </div>
-        </div>
-    </section>
-
-    <section class="promise">
-        <div class="container">
-            <h2>My Promise to You</h2>
-            <p>When you invite me into your home and heart during this transformative time, I bring not only my years of professional experience but also the compassion born from my own story.</p>
-            
-            <p>I understand the vulnerability of new beginnings and the courage it takes to ask for support.</p>
-            
-            <p>I promise to meet you exactly where you are—without judgment, with deep respect for your unique path, and with unwavering faith in your family's ability to thrive.</p>
-            
-            <p class="signature">Holding space for your new beginning.</p>
-            
-            <p class="signature"><strong>Ashlee McKenzie</strong></p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Ready to Begin Your Supported Journey?</h2>
-            <p>Let's create a nurturing foundation for your growing family</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <p>am.nurturetr@proton.me</p>
-                </div>
-                <div class="contact-item">
-                    <h3>📱 Phone</h3>
-                    <p>408-307-8295</p>
-                </div>
-                <div class="contact-item">
-                    <h3>🌍 Service Area</h3>
-                    <p>San Francisco Bay Area</p>
-                </div>
-                <div class="contact-item">
-                    <h3>🕐 Availability</h3>
-                    <p>Overnight & daytime support</p>
-                </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith">
             </div>
-        </div>
-    </section>
+          </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Nurture The Roots. Compassionate postpartum doula and newborn care specialist services.</p>
-            <p><em>When parents are nurtured, families flourish.</em></p>
-        </div>
-    </footer>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(408) 555-0100">
+          </div>
+
+          <div class="form-group">
+            <label for="due">Due Date / Baby's Age</label>
+            <input type="text" id="due" name="due_date" placeholder="e.g. July 2026 / 3 weeks old">
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service" name="service">
+              <option value="">— Select a service —</option>
+              <option>In-Home Postpartum Support</option>
+              <option>Overnight Support</option>
+              <option>Newborn Care</option>
+              <option>Lactation Support</option>
+              <option>Tailored Consultation</option>
+              <option>Family Bonding Support</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a little about your family and how I can support you…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+          <p class="form-note">I respond to all inquiries within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Nurture <span>The Roots</span></div>
+        <div class="footer-tagline">When parents are nurtured, families flourish.</div>
+      </div>
+      <div class="footer-right">
+        &copy; 2026 Nurture The Roots. All rights reserved.<br>
+        Compassionate postpartum doula &amp; newborn care specialist · Bay Area, CA
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Mobile hamburger ──────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+    });
+  });
+
+  // ── Scroll reveal ─────────────────────────────────────
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Smooth scroll (with header offset) ───────────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const id = this.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const offset = 72;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // ── Formspree AJAX submission ─────────────────────────
+  const form = document.querySelector('form[action*="formspree"]');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const orig = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
         });
 
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe service cards and belief items
-        document.querySelectorAll('.service-card, .belief-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+        if (res.ok) {
+          form.innerHTML = `
+            <div style="text-align:center;padding:2rem 0">
+              <div style="font-size:2.5rem;margin-bottom:1rem">🌱</div>
+              <h3 style="margin-bottom:.75rem;color:var(--sage)">Thank you!</h3>
+              <p style="color:var(--ink-light)">Your message has been received. Ashlee will be in touch within 24 hours.</p>
+            </div>`;
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch {
+        btn.textContent = orig;
+        btn.disabled = false;
+        alert('Something went wrong. Please email directly at am.nurturetr@proton.me');
+      }
+    });
+  }
+</script>
 </body>
 </html>
