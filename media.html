@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Nurture The Roots™</title>
-    <meta name="description" content="Schedule a call or send an inquiry. Postpartum doula support in San Francisco.">
+    <title>Media — Nurture The Roots™</title>
+    <meta name="description" content="Videos, talks, and conversations on postpartum care, the fourth trimester, and lineage-rooted family wisdom.">
+    <meta http-equiv="refresh" content="0; url=stories.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <style>
+        .video-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            background: var(--sand);
+            border-radius: var(--radius-card);
+            overflow: hidden;
+        }
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,10 +39,12 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="stories.html">Stories</a></li>
-            <li><a href="blog.html">Journal</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="media.html" class="active">Media</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </header>
@@ -35,68 +52,55 @@
 <!-- Page hero -->
 <section class="page-hero">
     <div class="container">
-        <span class="eyebrow">Contact</span>
-        <h1>Let's begin a quiet conversation.</h1>
-        <p class="subhead">There is no pressure here. Reach out when it feels right.</p>
+        <span class="eyebrow">Media</span>
+        <h1>Conversations &amp; teachings.</h1>
+        <p class="subhead">Short videos, podcast clips, and reflections on the work of postpartum care.</p>
     </div>
 </section>
 
-<!-- Schedule a call -->
+<!-- YouTube videos -->
 <section class="section section-light">
     <div class="container">
-        <div class="split top">
-            <div class="split-text">
-                <span class="eyebrow">Schedule a Call</span>
-                <h2>A brief consultation, on your time.</h2>
-                <p>The easiest way to begin is a short call. We'll talk about where you are, what you need, and whether we feel like a fit. There's no script and no pressure — just a quiet conversation.</p>
-                <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/YOUR-CALENDLY-LINK'}); return false;" class="btn">Schedule a call</a>
+        <div class="section-head">
+            <span class="eyebrow">YouTube</span>
+            <h2>From my channel</h2>
+        </div>
+        <div class="grid grid-2">
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        title="Nurture The Roots — YouTube"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
-            <div class="photo-frame wide">
-                <img src="assets/images/ashlee-intake.jpg" alt="Ashlee completing intake paperwork with a new family" style="object-position: center 25%;">
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        title="Nurture The Roots — YouTube"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Inquiry form -->
+<!-- TikTok embeds -->
 <section class="section section-sand">
     <div class="container">
         <div class="section-head">
-            <span class="eyebrow">Or Send a Message</span>
-            <h2>Inquiry form</h2>
-            <p>Prefer to write first? Send a thoughtful inquiry below and I'll respond within a few business days.</p>
+            <span class="eyebrow">TikTok</span>
+            <h2>Short reflections</h2>
         </div>
-        <div class="reading" style="margin: 0 auto;">
-            <iframe src="https://forms.dubsado.com/YOUR_DUBSADO_FORM_ID" frameborder="0" style="width: 100%; height: 620px; background: var(--cream); border-radius: var(--radius-card); border: 1px solid rgba(192,133,102,.15);"></iframe>
+        <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yourhandle" data-video-id="YOUR_VIDEO_ID" style="max-width: 325px; min-width: 280px;">
+                <section>Replace with TikTok embed code.</section>
+            </blockquote>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yourhandle" data-video-id="YOUR_VIDEO_ID" style="max-width: 325px; min-width: 280px;">
+                <section>Replace with TikTok embed code.</section>
+            </blockquote>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yourhandle" data-video-id="YOUR_VIDEO_ID" style="max-width: 325px; min-width: 280px;">
+                <section>Replace with TikTok embed code.</section>
+            </blockquote>
         </div>
-    </div>
-</section>
-
-<!-- Contact details -->
-<section class="section section-light">
-    <div class="container">
-        <div class="grid grid-3" style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <div class="card">
-                <div class="card-plain">
-                    <span class="eyebrow">Email</span>
-                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--soil);">
-                        <a href="mailto:am.nurturetr@proton.me" style="color: var(--soil); text-decoration: none;">am.nurturetr@proton.me</a>
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-plain">
-                    <span class="eyebrow">Service Area</span>
-                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--soil);">San Francisco, CA</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-plain">
-                    <span class="eyebrow">Availability</span>
-                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--soil);">Day &amp; overnight support</p>
-                </div>
-            </div>
-        </div>
+        <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
 </section>
 
@@ -121,13 +125,15 @@
                 <h4>Explore</h4>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="stories.html">Stories</a>
-                <a href="blog.html">Journal</a>
+                <a href="approach.html">Approach</a>
+                <a href="blog.html">Blog</a>
+                <a href="media.html">Media</a>
             </div>
             <div class="footer-col">
                 <h4>Connect</h4>
                 <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
+                <a href="testimonials.html">Testimonials</a>
                 <a href="mailto:am.nurturetr@proton.me">Email</a>
             </div>
         </div>
