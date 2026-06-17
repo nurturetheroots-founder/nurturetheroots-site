@@ -70,6 +70,7 @@
             padding: 5rem 0 4rem;
             text-align: center;
             background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero h1 {
@@ -100,7 +101,7 @@
             color: #2c3e2d;
         }
 
-        /* Section image */
+        /* Section images */
         .section-image {
             margin: 2.5rem auto;
             border-radius: 18px;
@@ -127,11 +128,11 @@
             padding: 4rem 0;
         }
 
-        .service-section:nth-child(odd) {
+        .service-section--cream {
             background: #f7f5f1;
         }
 
-        .service-section:nth-child(even) {
+        .service-section--white {
             background: white;
         }
 
@@ -184,76 +185,32 @@
             margin-top: 1rem;
         }
 
-        /* Soft divider */
-        .divider {
-            max-width: 120px;
-            margin: 0 auto;
-            border: none;
-            border-top: 2px solid #d4a5a5;
-            opacity: 0.4;
-        }
-
-        /* CTA section */
-        .cta-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #d4a5a5 0%, #c9a9a9 100%);
-            color: white;
-            padding: 18px 36px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.15rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
         /* Client Journey */
         .journey-section {
             padding: 5rem 0 4rem;
             background: white;
         }
 
-        .journey-section .section-heading {
+        .journey-heading {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 3rem;
         }
 
-        .journey-section .section-heading h2 {
+        .journey-heading h2 {
             font-size: 2.2rem;
             color: #2c3e2d;
             margin-bottom: 0.5rem;
         }
 
-        .journey-section .section-heading .subheading {
+        .journey-heading .subheading {
             font-size: 1.15rem;
             color: #7a8471;
             font-style: italic;
             margin-bottom: 1.5rem;
         }
 
-        .journey-section .section-heading p {
+        .journey-heading p {
             font-size: 1.1rem;
         }
 
@@ -301,6 +258,41 @@
             left: 0;
         }
 
+        /* CTA section */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4a5a5 0%, #c9a9a9 100%);
+            color: white;
+            padding: 18px 36px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.15rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
         footer {
             background: #2c3e2d;
             color: #f7f5f1;
@@ -317,8 +309,13 @@
                 font-size: 1.8rem;
             }
 
-            .service-content h2 {
+            .service-content h2,
+            .journey-heading h2 {
                 font-size: 1.6rem;
+            }
+
+            .phase {
+                padding: 1.5rem;
             }
         }
 
@@ -331,10 +328,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        .hero {
-            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
@@ -363,14 +356,16 @@
     <section class="intro">
         <div class="container">
             <p>Your fourth trimester is a threshold — a tender, transformative season where identity, lineage, and relationship take new shape. My role is to support your family with care that is attuned, sovereign, and rooted in who you are becoming. Every offering below is shaped by the Nurture The Roots™ Framework: <em>Identity · Lineage · Relationship · Rhythm.</em></p>
+
+            <!-- Image 1: Anchor — living room, book, baby -->
             <div class="section-image section-image--wide">
-                <img src="images/welcome.jpeg" alt="Ashlee holding a baby in a bright, calm environment near a window">
+                <img src="images/anchor-livingroom.jpeg" alt="Three adults sitting together in a cozy living room, one holding a baby wrapped in a rust-colored blanket, another holding The Fourth Trimester book, all smiling and engaged">
             </div>
         </div>
     </section>
 
     <!-- Section 1: Postpartum Doula Support -->
-    <section class="service-section">
+    <section class="service-section service-section--cream">
         <div class="container">
             <div class="service-content">
                 <h2>Postpartum Doula Support</h2>
@@ -393,7 +388,7 @@
     </section>
 
     <!-- Section 2: Newborn Care Specialist Support -->
-    <section class="service-section">
+    <section class="service-section service-section--white">
         <div class="container">
             <div class="service-content">
                 <h2>Newborn Care Specialist Support</h2>
@@ -413,17 +408,8 @@
         </div>
     </section>
 
-    <!-- Mid-page image between Sections 2 and 3 -->
-    <section style="padding: 2rem 0; background: #f7f5f1; text-align: center;">
-        <div class="container">
-            <div class="section-image section-image--medium" style="margin: 1rem auto;">
-                <img src="images/attunement.jpeg" alt="Ashlee on the floor with a baby in her lap, gently touching the baby's face in a warm, attuned moment">
-            </div>
-        </div>
-    </section>
-
     <!-- Section 3: Fourth Trimester Coaching -->
-    <section class="service-section">
+    <section class="service-section service-section--cream">
         <div class="container">
             <div class="service-content">
                 <h2>Fourth Trimester Coaching</h2>
@@ -444,7 +430,7 @@
     </section>
 
     <!-- Section 4: Holistic Family Support Sessions -->
-    <section class="service-section">
+    <section class="service-section service-section--white">
         <div class="container">
             <div class="service-content">
                 <h2>Holistic Family Support Sessions</h2>
@@ -465,10 +451,15 @@
     <!-- Section 5: The Nurture The Roots™ Client Journey -->
     <section class="journey-section">
         <div class="container">
-            <div class="section-heading">
+            <div class="journey-heading">
                 <h2>The Nurture The Roots™ Client Journey</h2>
                 <p class="subheading">A four‑phase pathway through the fourth trimester.</p>
                 <p>This is the relational arc that holds all of my services. Every family moves through these phases at their own pace, with support that is attuned, grounded, and aligned with who they are becoming.</p>
+            </div>
+
+            <!-- Image 2: Journey opener — bassinet, bird mobile -->
+            <div class="section-image section-image--wide" style="margin-bottom: 3rem;">
+                <img src="images/bassinet-nursery.jpeg" alt="Ashlee holding a baby wrapped in a rust-colored blanket, standing beside a white mesh bassinet in a bright nursery with a bird mobile above">
             </div>
 
             <div class="phase">
@@ -483,6 +474,11 @@
                     <li>Postpartum vision</li>
                     <li>Support ecosystem review</li>
                 </ul>
+
+                <!-- Image 3: Support ecosystem — nursery group -->
+                <div class="section-image section-image--medium" style="margin-top: 2rem;">
+                    <img src="images/nursery-group.jpeg" alt="Three adults standing in a bright nursery, one holding a baby wrapped in a rust-colored blanket, the others observing">
+                </div>
             </div>
 
             <div class="phase">
@@ -529,9 +525,6 @@
     <!-- Section 6: How We Begin (CTA) -->
     <section class="cta-section">
         <div class="container">
-            <div class="section-image section-image--medium" style="box-shadow: 0 8px 30px rgba(0,0,0,0.18); margin-bottom: 2.5rem;">
-                <img src="images/hero.jpeg" alt="Ashlee standing barefoot holding a baby wrapped in a peach blanket, sunlight and greenery filling the room">
-            </div>
             <h2>How We Begin</h2>
             <p>Every family starts with a free 20‑minute consultation — a gentle, pressure‑free conversation to explore what support would feel grounding and aligned for your family.</p>
             <a href="index.html#contact" class="cta-button">Begin Your Postpartum Support →</a>
