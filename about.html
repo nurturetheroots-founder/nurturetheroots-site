@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ashlee — Nurture The Roots™</title>
+    <meta name="description" content="Meet Ashlee McKenzie — Certified Postpartum Doula, Newborn Care Specialist, and Fourth Trimester Expert with 15+ years of experience supporting families in San Francisco.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e2d;
+            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f7f5f1;
+        }
+
+        .logo a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4a5a5;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            color: #2c3e2d;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4a5a5 0%, #c9a9a9 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Prose sections */
+        .prose-section {
+            padding: 4rem 0;
+        }
+
+        .prose-section:nth-child(odd) {
+            background: white;
+        }
+
+        .prose-section:nth-child(even) {
+            background: #f7f5f1;
+        }
+
+        .prose-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .prose-content h2 {
+            font-size: 2rem;
+            color: #2c3e2d;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .prose-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose-content ul li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .prose-content ul li:before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+        }
+
+        .prose-content blockquote {
+            font-style: italic;
+            color: #7a8471;
+            border-left: 4px solid #d4a5a5;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Framework pillars on about page */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #d4a5a5;
+        }
+
+        .pillar-card h3 {
+            color: #2c3e2d;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        .pillar-card p {
+            color: #7a8471;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Presence section (green bg) */
+        .presence-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7a8471 0%, #8b9582 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .presence-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .presence-section p {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 4rem 0;
+            background: #f7f5f1;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            color: #2c3e2d;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #2c3e2d;
+        }
+
+        footer {
+            background: #2c3e2d;
+            color: #f7f5f1;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .pillar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Nurture The Roots</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="framework.html">Framework</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Meet Ashlee</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="prose-section">
+        <div class="container">
+            <div class="prose-content">
+                <p>I'm Ashlee McKenzie — a Certified Postpartum Doula, Newborn Care Specialist, and Fourth Trimester Expert based in San Francisco. For more than fifteen years, I've supported families through the tender, disorienting, identity‑shifting threshold of the fourth trimester.</p>
+                <p>My work is grounded in attunement, presence, and a deep respect for the early postpartum period as a foundational time for both parent and child. I help families slow down, listen deeply, and build rhythms that feel aligned with who they are becoming.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where My Work Comes From -->
+    <section class="prose-section">
+        <div class="container">
+            <div class="prose-content">
+                <h2>🌱 Where My Work Comes From</h2>
+                <p>My approach didn't begin in a training or a classroom. It began in my lineage.</p>
+                <p>I come from Sinixt and Chinook ancestry — peoples whose traditions hold care, continuity, and relational tending as sacred. For much of my life, I didn't have the language or access to fully understand this inheritance. But the values were always there: the instinct to listen, to observe, to honor rhythm, to protect the vulnerable, to tend the roots so the future can thrive.</p>
+                <p>Through reclamation, research, and reconnection, I've been able to name and integrate this part of myself. The more I learned about my ancestors, the more clearly I understood why my work has always felt like ceremony — why I've always been drawn to identity, lineage, and the earliest relational beginnings.</p>
+                <p><strong>Nurture The Roots™ is not a brand I created.</strong><br>It is a lineage I stepped into.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Identity, Belonging, Continuity -->
+    <section class="prose-section">
+        <div class="container">
+            <div class="prose-content">
+                <h2>🌿 A Life Shaped by Identity, Belonging, and Continuity</h2>
+                <p>My personal story — adoptee, foster care, reclamation, multi‑generation lineage research — taught me early on that identity and belonging are not abstract ideas. They are lived experiences that shape how we attach, how we parent, how we love, and how we understand ourselves.</p>
+                <p>This lived understanding is woven into every part of my work.</p>
+                <p>It's why I see the fourth trimester as a threshold, not a task list.<br>
+                It's why I support parents in naming who they are becoming.<br>
+                It's why I help families build systems that honor their values, not someone else's expectations.<br>
+                It's why I believe care is ceremony, and continuity is a form of protection.</p>
+                <p><strong>My framework is not theoretical.</strong><br>It is lived, embodied, and ancestral.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Mastery -->
+    <section class="prose-section">
+        <div class="container">
+            <div class="prose-content">
+                <h2>🌸 Professional Mastery, Rooted in Attunement</h2>
+                <p>Over the past 15+ years, I've supported more than 500 families across the Bay Area. My work blends:</p>
+                <ul>
+                    <li>Newborn behavioral observation</li>
+                    <li>Developmental + relational guidance</li>
+                    <li>Identity‑aligned postpartum support</li>
+                    <li>Cue‑based care</li>
+                    <li>Attachment‑supportive practices</li>
+                    <li>Ancestral care principles</li>
+                    <li>Family systems support</li>
+                    <li>Postpartum planning and continuity</li>
+                </ul>
+                <p>I am trained in newborn development, lactation education, infant massage, and the Brazelton Touchpoints/NBO approach — a framework that aligns deeply with my lineage‑rooted understanding of newborn communication.</p>
+                <p>But my deepest training has come from the families I've served, the babies I've held, and the ancestral values that have guided me long before I had the words for them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Framework -->
+    <section class="prose-section">
+        <div class="container">
+            <div class="prose-content">
+                <h2>🌿 The Nurture The Roots™ Framework</h2>
+                <p>My work is shaped by four pillars — the synthesis of my lineage, my lived experience, and my professional training:</p>
+            </div>
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <h3>I. Identity</h3>
+                    <p>Postpartum support begins with who you are becoming, not what you must do.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>II. Lineage</h3>
+                    <p>Care is continuity. Care is ceremony. Care is the thread between past and future.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>III. Relationship</h3>
+                    <p>Newborns communicate from the beginning. Attunement is the foundation of connection.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>IV. Rhythm</h3>
+                    <p>Families thrive when their systems honor their real lives, not idealized expectations.</p>
+                </div>
+            </div>
+            <div class="prose-content">
+                <p><strong>These pillars are not a method.</strong><br>They are a worldview.</p>
+                <p>To explore the full framework, visit the <a href="framework.html">Framework Page</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Role -->
+    <section class="presence-section">
+        <div class="container">
+            <h2>🌙 My Role in Your Postpartum Season</h2>
+            <p>When I enter a family's home, I'm not there to manage tasks. I'm there to support identity, relationship, rhythm, and continuity. I'm there to help you understand your baby, trust your instincts, and build a postpartum experience that feels grounded, sovereign, and deeply aligned with who you are.</p>
+            <p>My presence is calm, steady, and attuned.<br>
+            My care is relational, developmental, and identity‑rooted.<br>
+            My intention is always the same:</p>
+            <p><strong>To help your family feel held, confident, and connected — from the very beginning.</strong></p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Step Into Your Fourth Trimester With Support</h2>
+            <p>Every family's needs are different. Our consultation is a gentle, pressure‑free conversation to explore what would help you feel grounded, confident, and held.</p>
+            <a href="index.html#contact" class="cta-button">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nurture The Roots™. Lineage‑rooted postpartum care.</p>
+            <p><em>Postpartum care begins at the roots.</em></p>
+        </div>
+    </footer>
+</body>
+</html>
