@@ -63,9 +63,68 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #f7f5f1 0%, #f2efe8 100%);
-            padding: 4rem 0;
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(44, 62, 45, 0.35) 0%,
+                rgba(44, 62, 45, 0.55) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1,
+        .hero .hero-tagline,
+        .hero .hero-description {
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero .hero-tagline {
+            color: #f2efe8;
+        }
+
+        /* Welcome image */
+        .welcome-image {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .welcome-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .hero-content h1 {
@@ -381,6 +440,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-image">
+            <img src="images/hero.jpeg" alt="Ashlee standing barefoot in a plant-filled living room holding a baby wrapped in a peach blanket, sunlight streaming through a large window">
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <h1>Postpartum care begins at the roots.</h1>
@@ -404,6 +467,9 @@
                     <p>Parents deserve care that is grounded, relational, and deeply human.</p>
                     <p>Nurture The Roots™ supports families through identity shifts, newborn communication, emotional regulation, and the creation of sovereign systems of support.</p>
                     <p>This is not task‑based care.<br>This is identity‑based, lineage‑rooted postpartum tending.</p>
+                    <div class="welcome-image">
+                        <img src="images/welcome.jpeg" alt="Ashlee sitting in a light wooden chair near a window, holding a baby on her lap in a soft, intimate moment">
+                    </div>
                 </div>
             </div>
         </div>
